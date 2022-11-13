@@ -1,0 +1,205 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap'); /*import das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:wght@100;200;300;400&display=swap'); /*import das fontes*/    
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-sizing: border-box; /*para o conteudo não sair nos formularios*/
+}
+
+body{ /* Reset CSS - para tirar configurações pré carregadas pelo navegador*/
+    font-size: 100%;
+}
+
+:root { /* Definando as fontes em variaveis */
+    --font-1: "Righteous", cursive;
+    --font-2: "Sarala", sans-serif ;
+    --font-3: 'Gochi Hand', cursive;
+    --font-4: 'Poppins', sans-serif;
+}
+
+header{
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; /* esconder o overflow desabilita a possibilidade do cabeçalho passar o tamanho da janela e ficar com aquela barra de rolagem embaixo */
+    position: relative;
+}
+
+.welcome {
+    width: 100%;
+    height: 20px;
+    background-color: #000;    
+}
+
+.welcome p{
+    font-family: var(--font-4);
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    color: #fff;
+    text-align: center;
+    padding-top: 4px;    
+}
+
+.menu {
+    width: 100%;
+    height: 90px;
+    background-color: #ffd6e4 ;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Menu */
+.menu-logo img {
+    width: 250px;
+    margin-left: 40px;    
+}
+
+/* Links Menu */
+.menu-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;    
+}
+
+.menu-links a{
+    font-family: var(--font-4);
+    font-size: 20px ;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;    
+}
+
+.menu-links a:hover{
+    color: #fa3b1def;
+    text-transform: uppercase;    
+}
+
+/* Sacola de compras */
+.menu-carrinho{
+    width: 130px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.menu-carrinho p{
+    font-family: var(--font-4);
+    font-size: 15px;
+}
+
+#bag {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+#seta{
+    font-size: 20px;
+}
+
+#seta:hover {
+    color: #fa3b1def;
+}
+
+/* Banner */
+.banner{
+    width: 100%;    
+}
+
+.banner img{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    object-fit: cover;
+    animation: zoom 4s;
+}
+
+@keyframes zoom{ /* Cria os frames para fazer a animação de zoom in e zoom out. Depois é necessário aplicar (no css) no elemento que deseja utilizar a animação, no caso na imagem.  */
+    0% {
+        transform: scale(1.1); /* zoom in */
+    }
+    100% {
+        transform: scale(1); /* zoom out */
+    }
+}
+
+.divisoria-vermelha{
+    width: 100%;
+    height: 40px;
+    background-color: #d42f14;
+    margin-top: -10px;
+}
+
+/*Inicio corpo da página */
+
+main{
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; /* esconder o overflow desabilita a possibilidade do cabeçalho passar o tamanho da janela e ficar com aquela barra de rolagem embaixo */    
+}
+
+.container {
+    width: 100%; 
+    height: 100%;   
+}
+
+.container #bg{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    
+}
+
+.container-produtos {
+    display: flex;
+    justify-content: center;       
+}
+
+@keyframes appear{ 
+    0%{
+      transform: translateY(-50px); /*não preciso retirar no 100% pq ele entende isso automaticamente*/
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  } 
+
+#produtos,
+#carrinho{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    
+    position: absolute;
+    width: 1000px;
+    padding-bottom: 20px;
+    
+    background-color: #fff; 
+   
+}
+
+
+#produtos img{
+    animation: appear 1s;
+    padding-top: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+#produtos img:hover {
+    transform: scale(1.02);
+    opacity: 0.7;    
+}
+
