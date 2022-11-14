@@ -36,9 +36,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Sugar Lips é um e-commerce fictício desenvolvido para ilustrar o projeto de e-commerce<br>
-Onde é possivel adicionar os produtos ao carrinho, finalizar a compra e testar métodos de pagamento<br>
-Algumas funções estão em desenvolvimento
+Sugar Lips é um e-commerce fictício desenvolvido para ilustrar esse projeto.<br>
+Neste e-commerce é possivel adicionar os produtos ao carrinho, finalizar a compra e testar métodos de pagamento.<br>
+Algumas funções estão em desenvolvimento.<br>
 Você pode visualizar o projeto [AQUI](https://erikamattje.github.io/ecommerce-sugarlips/)
 <br><br>
 ## 🔖 Icones
